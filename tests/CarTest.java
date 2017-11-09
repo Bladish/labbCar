@@ -4,9 +4,28 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CarTest {
     @Test
+    void setTurboOn() {
+        Car car1 = new Volvo240();
+        car1.setTurboOn();
+        assertFalse(false);
+
+    }
+
+    @Test
+    void setTurboOff() {
+        Car car1 = new Saab95();
+        car1.setTurboOff();
+        assertFalse(false);
+    }
+
+    @Test
+    void getTurbo() {
+    }
+
+    @Test
     void move() {
         Car car1 = new Saab95();
-        startEngine();
+        car1.startEngine();
         car1.move();
         double output = car1.getyPos();
         assertEquals(0.1, output);
@@ -40,7 +59,7 @@ class CarTest {
     @Test
     void brake() {
         Car car1 = new Volvo240();
-        car1.brake(-1);
+        car1.brake(2);
         double output = car1.getCurrentSpeed();
         assertEquals(0, output);
 
