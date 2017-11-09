@@ -17,7 +17,7 @@ public abstract class Car implements Movable {
     //MOVABLE METHODS
 
   public void move() {
-        yPos = currentSpeed;
+        yPos += currentSpeed;
   }
 
 
