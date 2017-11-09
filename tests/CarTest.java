@@ -60,7 +60,7 @@ class CarTest {
                 car2.turnRight();
                     double output = car2.getxPos();
                         System.out.println(car2.getxPos());
-                        assertEquals(0.1, output);
+                        assertEquals(-0.1, output);
 
         }
 

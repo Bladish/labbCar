@@ -17,16 +17,16 @@ public abstract class Car implements Movable {
     //MOVABLE METHODS
 
   public void move() {
-        yPos += currentSpeed;
+        this.yPos += currentSpeed;
   }
 
 
   public void turnLeft() {
-     xPos += currentSpeed;
+     this.xPos -= currentSpeed;
   }
 
   public void turnRight(){
-        xPos -= currentSpeed;
+        this.xPos += currentSpeed;
   }
 
 
@@ -102,15 +102,14 @@ public abstract class Car implements Movable {
         turboOn = false;
   }
     public boolean getTurboOn() {return turboOn;}
-    public boolean getTurbo() {
-        return turboPower > 1;
-  }
+    public boolean getTurbo() { return turboPower > 1; }
     public int getNrDoors(){
       return nrDoors;
   }
     public double getEnginePower(){
       return enginePower;
   }
+    public double getTurboPower(){return turboPower;}
 
     public double getCurrentSpeed(){
       return currentSpeed;
