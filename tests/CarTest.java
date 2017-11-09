@@ -7,8 +7,8 @@ class CarTest {
     void setTurboOn() {
         Car car1 = new Volvo240();
         Car car2 = new Saab95();
-        car1.setTurboOn();{assertFalse(false);}
-        car2.setTurboOn();{assertTrue(true); }
+        car1.setTurboOn();{assertFalse(car1.getTurbo());}
+        car2.setTurboOn();{assertTrue(car2.getTurbo()); }
 
     }
 
@@ -16,7 +16,7 @@ class CarTest {
     void setTurboOff() {
         Car car1 = new Saab95();
         car1.setTurboOff();
-        assertFalse(false);
+        assertFalse(car1.getTurbo());
     }
 
     @Test
