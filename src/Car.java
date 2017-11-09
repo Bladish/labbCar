@@ -11,9 +11,22 @@ public abstract class Car implements Movable {
 
   //MOVABLE VARS
   private double xPos;
-  private double yPos;
+  private double yPos = 1;
   private double direction;
 
+    /**
+     * Main
+     * @param args
+     */
+  public static void main(String[] args){
+
+  }
+
+    /**
+     * Contructor
+     * @param xPos
+     * @param yPos
+     */
     public Car(double xPos, double yPos) {
         this.xPos = xPos;
         this.yPos = yPos;
@@ -24,14 +37,28 @@ public abstract class Car implements Movable {
 
     //MOVABLE METHODS
 
-  public void move(double newXPos, double newYPos) {
+  public void move() {
+        startEngine();
+        if(direction > 0 ){
+            xPos += currentSpeed;
+        }
+        else if(direction < 0 ){
+            xPos -= currentSpeed;
+        }
+        else if(direction == 0){
+            yPos += currentSpeed;
+        }
+        else yPos -= currentSpeed;
+  }
+
+  public void direction(double newXPos, double newYPos) {
       this.direction = ((newXPos - xPos) / (newYPos - yPos));
       this.xPos = newXPos;
       this.yPos = newYPos;
   }
 
   public void turnLeft(double newXPos) {
-      if(direction > 0 && xPos > newXPos){
+     /* if(direction > 0 && xPos > newXPos){
           this.xPos = xPos--;
 
       }
@@ -44,11 +71,11 @@ public abstract class Car implements Movable {
       }
       else if(direction == 0 && xPos > newXPos){
           this.yPos = yPos++;
-      }
+      }*/
 
   }
     public void turnRight(double newXPos) {
-        if(direction > 0 && xPos > newXPos){
+        /*if(direction > 0 && xPos > newXPos){
             this.xPos = xPos++;
 
         }
@@ -62,6 +89,7 @@ public abstract class Car implements Movable {
         else if(direction == 0 && xPos > newXPos){
             this.yPos = yPos--;
         }
+        */
 
 
     }
@@ -89,7 +117,7 @@ public abstract class Car implements Movable {
   }
 
     /**
-     * This method calucalet the acceleration
+     * This method calucalet the current speed
      * @param amount
      */
     private void incrementSpeed(double amount){

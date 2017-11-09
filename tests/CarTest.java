@@ -5,6 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class CarTest {
     @Test
     void move() {
+
+    }
+
+    @Test
+    void direction() {
     }
 
     @Test
@@ -29,14 +34,6 @@ class CarTest {
 
     @Test
     void stopEngine() {
-    }
-
-    @Test
-    void setTurboOn() {
-    }
-
-    @Test
-    void setTurboOff() {
     }
 
 }
