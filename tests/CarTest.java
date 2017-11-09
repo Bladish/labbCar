@@ -6,8 +6,9 @@ class CarTest {
     @Test
     void setTurboOn() {
         Car car1 = new Volvo240();
-        car1.setTurboOn();
-        assertFalse(false);
+        Car car2 = new Saab95();
+        car1.setTurboOn();{assertFalse(false);}
+        car2.setTurboOn();{assertTrue(true); }
 
     }
 
