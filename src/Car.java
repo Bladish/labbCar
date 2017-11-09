@@ -10,8 +10,8 @@ public abstract class Car implements Movable {
   protected double turboPower;
 
   //MOVABLE VARS
-  private double xPos;
-  private double yPos = 1;
+  private double xPos = 0;
+  private double yPos = 0;
   private double direction;
 
     /**
@@ -24,76 +24,28 @@ public abstract class Car implements Movable {
 
     /**
      * Contructor
-     * @param xPos
-     * @param yPos
+     *
      */
-    public Car(double xPos, double yPos) {
-        this.xPos = xPos;
-        this.yPos = yPos;
+    public Car() {
+
         Car car1 = new Saab95();
         Car car2 = new Volvo240();
-
     }
 
     //MOVABLE METHODS
 
   public void move() {
-        startEngine();
-        if(direction > 0 ){
-            xPos += currentSpeed;
-        }
-        else if(direction < 0 ){
-            xPos -= currentSpeed;
-        }
-        else if(direction == 0){
-            yPos += currentSpeed;
-        }
-        else yPos -= currentSpeed;
+        yPos = currentSpeed;
   }
 
-  public void direction(double newXPos, double newYPos) {
-      this.direction = ((newXPos - xPos) / (newYPos - yPos));
-      this.xPos = newXPos;
-      this.yPos = newYPos;
+
+  public void turnLeft() {
+     xPos += currentSpeed;
   }
 
-  public void turnLeft(double newXPos) {
-     /* if(direction > 0 && xPos > newXPos){
-          this.xPos = xPos--;
-
-      }
-      else if(direction < 0 && xPos < newXPos){
-          this.xPos = xPos++;
-      }
-      else if(direction == 0 && xPos < newXPos){
-          this.yPos = yPos--;
-
-      }
-      else if(direction == 0 && xPos > newXPos){
-          this.yPos = yPos++;
-      }*/
-
+  public void turnRight(){
+        xPos -= currentSpeed;
   }
-    public void turnRight(double newXPos) {
-        /*if(direction > 0 && xPos > newXPos){
-            this.xPos = xPos++;
-
-        }
-        else if(direction < 0 && xPos < newXPos){
-            this.xPos = xPos--;
-        }
-        else if(direction == 0 && xPos < newXPos){
-            this.yPos = yPos++;
-
-        }
-        else if(direction == 0 && xPos > newXPos){
-            this.yPos = yPos--;
-        }
-        */
-
-
-    }
-
 
 
 
