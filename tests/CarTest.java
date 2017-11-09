@@ -16,7 +16,7 @@ class CarTest {
     void setTurboOff() {
         Car car1 = new Saab95();
         car1.setTurboOff();
-        assertFalse(car1.getTurbo());
+        assertTrue(car1.getTurbo());
     }
 
     @Test
