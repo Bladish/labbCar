@@ -5,12 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class CarTest {
     @Test
     void move() {
+        Car test
 
     }
 
-    @Test
-    void direction() {
-    }
 
     @Test
     void turnLeft() {
