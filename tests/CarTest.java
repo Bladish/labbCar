@@ -36,7 +36,13 @@ class CarTest {
 
         @Test
         void getTurbo () {
+            Car car1 = new Saab95();
+            double output = car1.getTurboPower();
+            car1.setTurboOn();
+            assertEquals(1.3, output);
+            assertTrue(car1.getTurbo());
         }
+
 
         @Test
         void move () {
@@ -49,6 +55,13 @@ class CarTest {
 
         @Test
         void turnLeft () {
+            Car car2 = new Volvo240();
+                car2.speedFactor();
+                car2.turnRight();
+                    double output = car2.getxPos();
+                        System.out.println(car2.getxPos());
+                        assertEquals(1.25, output);
+
         }
 
         @Test
