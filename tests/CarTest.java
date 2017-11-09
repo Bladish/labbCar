@@ -5,6 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class CarTest {
     @Test
     void move() {
+        Car car1 = new Saab95();
+        startEngine();
+        car1.move();
+        double output = car1.getyPos();
+        assertEquals(0.1, output);
     }
 
     @Test
@@ -26,10 +31,18 @@ class CarTest {
 
     @Test
     void gas() {
+        Car car1 = new Saab95();
+        car1.gas(0.9);
+        double output = car1.getCurrentSpeed();
+        assertEquals(1.125, output);
     }
 
     @Test
     void brake() {
+        Car car1 = new Volvo240();
+        car1.brake(-1);
+        double output = car1.getCurrentSpeed();
+        assertEquals(0, output);
 
     }
 

@@ -10,27 +10,9 @@ public abstract class Car implements Movable {
   protected double turboPower;
 
   //MOVABLE VARS
-  private double xPos = 0;
-  private double yPos = 0;
+  private double xPos;
+  private double yPos;
 
-
-    /**
-     * Main
-     * @param args
-     */
-  public static void main(String[] args){
-
-  }
-
-    /**
-     * Contructor
-     *
-     */
-    public Car() {
-
-        Car car1 = new Saab95();
-        Car car2 = new Volvo240();
-    }
 
     //MOVABLE METHODS
 
