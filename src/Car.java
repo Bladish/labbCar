@@ -101,7 +101,7 @@ public abstract class Car implements Movable {
     public void setTurboOff() {
         turboOn = false;
   }
-    public void getTurboOn() { return turboOn}
+    public boolean getTurboOn() {return turboOn;}
     public boolean getTurbo() {
         return turboPower > 1;
   }
