@@ -10,23 +10,23 @@ public abstract class Car implements Movable {
   protected double turboPower;
 
   //MOVABLE VARS
-  private double xPos;
-  private double yPos;
+  public double xPos;
+  public double yPos;
 
 
     //MOVABLE METHODS
 
   public void move() {
-        this.yPos += currentSpeed;
+        yPos += currentSpeed;
   }
 
 
   public void turnLeft() {
-     this.xPos -= currentSpeed;
+     xPos -= currentSpeed;
   }
 
   public void turnRight(){
-        this.xPos += currentSpeed;
+        xPos += currentSpeed;
   }
 
 
