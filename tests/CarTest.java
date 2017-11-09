@@ -56,11 +56,11 @@ class CarTest {
         @Test
         void turnLeft () {
             Car car2 = new Volvo240();
-                car2.speedFactor();
+                car2.startEngine();
                 car2.turnRight();
                     double output = car2.getxPos();
                         System.out.println(car2.getxPos());
-                        assertEquals(1.25, output);
+                        assertEquals(0.1, output);
 
         }
 
