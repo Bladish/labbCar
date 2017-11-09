@@ -12,7 +12,7 @@ public abstract class Car implements Movable {
   //MOVABLE VARS
   private double xPos = 0;
   private double yPos = 0;
-  private double direction;
+
 
     /**
      * Main
@@ -53,21 +53,34 @@ public abstract class Car implements Movable {
      * This method caluclate the cars total enginepower.
      * @return an equation.  enginePower * trimFactor * 0.01 * turbo
      */
-    private double speedFactor() {
+    public double speedFactor() {
         double turbo = 1;
         if(turboOn) turbo = turboPower;
         return enginePower * 0.01 * trimFactor * turbo;
   }
 
     // TODO fix this method according to lab pm
-    public void gas(double amount){
-        incrementSpeed(amount);
-  }
+    public void gas(double amount) {
+        try {
+            if (1.0 < amount || amount < 0.0) {
+                throw new Exception("Invalid amount");
+            }
+            incrementSpeed(amount);
+        } catch(Exception e) {
+            System.err.println(e.getMessage());
+        }
+    }
     // TODO fix this method according to lab pm
-    public void brake(double amount){
-        decrementSpeed(amount);
-  }
-
+    public void brake(double amount) {
+        try {
+            if (1.0 < amount || amount < 0.0) {
+                throw new Exception("Invalid amount");
+            }
+            decrementSpeed(amount);
+        } catch(Exception e) {
+            System.err.println(e.getMessage());
+        }
+    }
     /**
      * This method calucalet the current speed
      * @param amount
@@ -127,6 +140,14 @@ public abstract class Car implements Movable {
     public void setColor(Color clr){
         color = clr;
   }
+
+    public double getxPos() {
+        return xPos;
+    }
+
+    public double getyPos() {
+        return yPos;
+    }
 
   /*public void incrementSpeed(double amount){
       currentSpeed = getCurrentSpeed() + speedFactor() * amount;

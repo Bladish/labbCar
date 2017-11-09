@@ -1,7 +1,6 @@
 import java.awt.*;
 public class Saab95 extends Car {
     public Saab95(){
-        super(0, 0);
         nrDoors = 2;
         color = Color.red;
         enginePower = 125;
